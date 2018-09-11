@@ -9,7 +9,6 @@ For example "StatsAPICommand", with the following files and folders beneath it:
 ```
 StatsAPICommand
 |   composer.json
-|   composer.lock
 |   config.yaml
 +---bin
 |       console.php
