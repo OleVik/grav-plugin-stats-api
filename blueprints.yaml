@@ -4,7 +4,7 @@ description: Get Admin-plugin Statistics via REST.
 icon: plug
 author:
   name: OleVik
-  email: git@olevik.net
+  email: OleVik@users.noreply.github.com
 homepage: https://github.com/OleVik/grav-plugin-stats-api
 keywords: statistics, stats, api, rest
 bugs: https://github.com/OleVik/grav-plugin-stats-api/issues

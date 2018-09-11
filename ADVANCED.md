@@ -24,7 +24,7 @@ StatsAPICommand
 
 "Config.yaml" needs your list of target sites, like this:
 
-```
+```yaml
 targets: 
   - 
     token: NVrzcU3h2hXuhZCJYZ6KUP29
@@ -39,7 +39,7 @@ targets:
 
 "Composer.json" needs our [Composer](https://getcomposer.org/ "The package manager for PHP") setup:
 
-```
+```json
 {
     "name": "olevik/stats-api-command",
     "description": "Query several Grav sites for stats and save them locally.",
@@ -65,7 +65,7 @@ targets:
 
 "bin/console.php" needs some simple instructions:
 
-```
+```php
 #!/usr/bin/env php
 <?php
 
@@ -78,7 +78,7 @@ $application->run();
 
 "src/Command/DownloadStatsCommand.php" needs the script we're using:
 
-```
+```php
 <?php
 namespace App\Command;
 
@@ -171,4 +171,18 @@ StatsAPICommand
 |   \---grav.somewhere
 |       \---2018-09-08
 |               daily.json
+```
+
+Example command output:
+
+```
+λ php bin/console.php download
+Looking for data directory ...
+Found or created data directory.
+Looking for config file ...
+Found config file.
+Parsed config file.
+Querying http://grav.local/stats-api/daily?AUTH_TOKEN=NVrzcU3h2hXuhZCJYZ6KUP29
+data/grav.local/2018-09-11/daily.json
+Saved data to data/grav.local/2018-09-11/daily.json
 ```
